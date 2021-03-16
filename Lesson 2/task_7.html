@@ -1,0 +1,12 @@
+<script>
+    // 7. *Сравнить null и 0. Попробуйте объяснить результат.
+
+
+    console.log(null == 0);   // false, нестрогое сравнение (==) undefined == undefined, null == null и больше они ничему не равны, такая особенность языка js
+
+    // Далее операторы сравнения приводят null к числу, поэтому null не больше и не меньше 0, а так же 0 равен 0
+    console.log(null > 0);    // false
+    console.log(null < 0);    // false
+    console.log(null >= 0);   // true
+
+</script>
