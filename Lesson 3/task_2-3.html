@@ -1,0 +1,46 @@
+<script>
+    // 2. С этого урока начинаем работать с функционалом интернет-магазина.
+    // Предположим, есть сущность корзины. Нужно реализовать функционал подсчета
+    // стоимости корзины в зависимости от находящихся в ней товаров.
+    // 3. Товары в корзине хранятся в массиве. Задачи:
+    //     a) Организовать такой массив для хранения товаров в корзине;
+    //     b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+
+    var goods = [
+        {
+            title: "Товар 1",
+            price: 99,
+            count: 2,
+        },
+        {
+            title: "Товар 2",
+            price: 699,
+            count: 1,
+        },
+        {
+            title: "Товар 3",
+            price: 199,
+            count: 3,
+        },
+        {
+            title: "Товар 4",
+            price: 399,
+            count: 3,
+        },
+    ];
+
+    function countBasketPrice(array){
+        var totalPrice = 0;
+
+        for(var arr of array){
+            arr.price = arr.price * arr.count;
+            document.write('<p>' + arr.title + ' в колличестве ' + arr.count + ' шт. стоит ' + arr.price + ' руб.</p>');
+            totalPrice += arr.price;
+        }
+        document.write('<hr>');
+        document.write('<p> Сумма всех товаров в корзине: ' + totalPrice + ' руб.</p>');
+
+    }
+
+    countBasketPrice(goods);
+</script>
